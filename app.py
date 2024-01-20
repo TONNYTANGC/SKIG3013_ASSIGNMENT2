@@ -16,7 +16,7 @@ app = Flask(__name__, template_folder=templates_folder, static_folder=static_fol
 app.secret_key = secrets.token_hex(32)
 
 # Use ngrok to expose the local development server to the internet
-run_with_ngrok(app)
+# run_with_ngrok(app)
 
 # db_folder = '/content/drive/MyDrive/SKIG3013Asg2'
 # db_path = db_folder + '/mydatabase.db'
