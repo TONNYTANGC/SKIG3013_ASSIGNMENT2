@@ -25,10 +25,6 @@ jobs:
           python -m pip install flask-ngrok
 
 
-      - name: Generate static assets
-        run: |
-          # Adjust this command based on how you generate static assets
-          python app.py
 
   deploy:
     runs-on: ubuntu-latest
