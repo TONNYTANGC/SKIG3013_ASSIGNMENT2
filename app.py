@@ -18,87 +18,87 @@ app.secret_key = secrets.token_hex(32)
 # Use ngrok to expose the local development server to the internet
 run_with_ngrok(app)
 
-db_folder = '/content/drive/MyDrive/SKIG3013Asg2'
-db_path = db_folder + '/mydatabase.db'
+# db_folder = '/content/drive/MyDrive/SKIG3013Asg2'
+# db_path = db_folder + '/mydatabase.db'
 
 # SQLite database initialization
-conn = sqlite3.connect(db_path)
-cursor = conn.cursor()
+# conn = sqlite3.connect(db_path)
+# cursor = conn.cursor()
 
 
-def initialize_database():
-    with sqlite3.connect(db_path) as conn:
-        cursor = conn.cursor()
+# def initialize_database():
+#     with sqlite3.connect(db_path) as conn:
+#         cursor = conn.cursor()
 
-        # Query to create the 'users' table
-        create_table_query = '''
-        CREATE TABLE IF NOT EXISTS users (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            username TEXT NOT NULL,
-            password TEXT NOT NULL
-        )
-        '''
-        cursor.execute(create_table_query)
+#         # Query to create the 'users' table
+#         create_table_query = '''
+#         CREATE TABLE IF NOT EXISTS users (
+#             id INTEGER PRIMARY KEY AUTOINCREMENT,
+#             username TEXT NOT NULL,
+#             password TEXT NOT NULL
+#         )
+#         '''
+#         cursor.execute(create_table_query)
 
-        # Query to insert a user if not exists
-        insert_query = '''
-        INSERT INTO users(username, password)
-        SELECT ?, ?
-        WHERE NOT EXISTS (
-            SELECT 1 FROM users WHERE username = ?
-        )
-        '''
+#         # Query to insert a user if not exists
+#         insert_query = '''
+#         INSERT INTO users(username, password)
+#         SELECT ?, ?
+#         WHERE NOT EXISTS (
+#             SELECT 1 FROM users WHERE username = ?
+#         )
+#         '''
 
-        user_data = ('tonny@uum.com', '67890', 'tonny')
-        cursor.execute(insert_query, user_data)
-        conn.commit()
+#         user_data = ('tonny@uum.com', '67890', 'tonny')
+#         cursor.execute(insert_query, user_data)
+#         conn.commit()
 
-        # Query to select and print all users for verification
-        select_query = 'SELECT * FROM users'
-        cursor.execute(select_query)
-        rows = cursor.fetchall()
-        for row in rows:
-            print(row)
+#         # Query to select and print all users for verification
+#         select_query = 'SELECT * FROM users'
+#         cursor.execute(select_query)
+#         rows = cursor.fetchall()
+#         for row in rows:
+#             print(row)
 
-# Initialize the database when the application starts
-initialize_database()
+# # Initialize the database when the application starts
+# initialize_database()
 
 # Define routes
-@app.route("/", methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        username = request.form.get("username")
-        password = request.form.get("password")
+# @app.route("/", methods=['GET', 'POST'])
+# def login():
+#     if request.method == 'POST':
+#         username = request.form.get("username")
+#         password = request.form.get("password")
 
-        print(f"Received login request. Username: {username}, Password: {password}")
+#         print(f"Received login request. Username: {username}, Password: {password}")
 
-        conn = sqlite3.connect(db_folder + '/mydatabase.db')
-        cursor = conn.cursor()
+#         conn = sqlite3.connect(db_folder + '/mydatabase.db')
+#         cursor = conn.cursor()
 
-        query = '''
-        SELECT * FROM users WHERE username = ? AND password = ?
-        '''
+#         query = '''
+#         SELECT * FROM users WHERE username = ? AND password = ?
+#         '''
 
-        cursor.execute(query, (username, password))
-        result = cursor.fetchone()
+#         cursor.execute(query, (username, password))
+#         result = cursor.fetchone()
 
-        print(f"Query Result: {result}")
+#         print(f"Query Result: {result}")
 
-        if result:
-            # Login successful
-            logged_in_username = result[1]  # Access the username from the tuple
-            print(f"Login successful. Welcome, {logged_in_username}!")
+#         if result:
+#             # Login successful
+#             logged_in_username = result[1]  # Access the username from the tuple
+#             print(f"Login successful. Welcome, {logged_in_username}!")
 
-            return render_template("landing_page.html", username=logged_in_username)
-        else:
-            message = "WRONG USERNAME OR PASSWORD. PLEASE TRY AGAIN!"
-            print(message)  # Print error message for debugging
-            flash(message, "error")
-            return render_template('login.html', message=message)
-    else:
-        return render_template('login.html')
+#             return render_template("landing_page.html", username=logged_in_username)
+#         else:
+#             message = "WRONG USERNAME OR PASSWORD. PLEASE TRY AGAIN!"
+#             print(message)  # Print error message for debugging
+#             flash(message, "error")
+#             return render_template('login.html', message=message)
+#     else:
+#         return render_template('login.html')
 
-@app.route("/base")
+@app.route("/")
 def base():
     return render_template("base.html")
 
