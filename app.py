@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_ngrok import run_with_ngrok
-from google.colab import drive
+# from google.colab import drive
 import sqlite3
 import secrets
 
-# Mount Google Drive
-drive.mount('/content/drive')
+# # Mount Google Drive
+# drive.mount('/content/drive')
 
 # Set the template and static folders
 templates_folder = '/content/drive/MyDrive/SKIG3013Asg2/templates'
