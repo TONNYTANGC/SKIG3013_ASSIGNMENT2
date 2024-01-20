@@ -25,7 +25,7 @@ jobs:
       - name: Generate static assets
         run: |
           # Adjust this command based on how you generate static assets
-          python your_generate_static_assets_script.py
+          python app.py
 
   deploy:
     runs-on: ubuntu-latest
