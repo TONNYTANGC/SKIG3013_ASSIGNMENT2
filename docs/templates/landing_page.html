@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}VeloceAir Express{% endblock %}
+
+{% block content %}
+
+<!-- ======= Landing Section ======= -->
+<section id="hero">
+  <div class="hero-container" data-aos="fade-up">
+    {% if username %}
+    <h1>Welcome, {{ username }}!</h1>
+    {% else %}
+    <h1>Welcome!</h1>
+    {% endif %}
+    <h2>leading pioneer in the drone parcel delivery industry.</h2>
+    <a href="#about" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
+  </div>
+</section>
+<!-- End Landing -->
+
+{% endblock %}
