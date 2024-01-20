@@ -24,14 +24,3 @@ jobs:
           python -m pip install flask
           python -m pip install flask-ngrok
 
-
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          deploy_key: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: master/docs
