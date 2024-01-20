@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}VeloceAir Express{% endblock %}</title>
+  <!-- Add other meta tags and links here -->
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center justify-content-between position-relative">
+      <a href="/" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>VeloceAir Express</h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="/main">Home</a></li>
+          <li><a class="nav-link scrollto" href="/about">About Us</a></li>
+          <li><a class="nav-link scrollto" href="/hobby">Hobby</a></li>
+          <li class="dropdown"><a href="/services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/portfolio">Express Parcel Delivery</a></li>
+              <li><a href="/portfolio">Customized Logistics Solutions</a></li>
+              <li><a href="/portfolio">Medical Transport Services</a></li>
+              <li><a href="/portfolio">Local Business Support</a></li>
+            </ul>
+          </li>
+          <li class="dropdown megamenu"><a href="/portfolio"><span>Portfolio</span> <i
+                                class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li>
+                <strong>Express Parcel Delivery</strong>
+                <a href="/portfolio">Swift Shipments</a>
+                <a href="/portfolio">Instant Delivery</a>
+                <a href="/portfolio">Rapid Dispatch</a>
+                <a href="/portfolio">Quick Courier</a>
+              </li>
+              <li>
+                <strong>Customized Logistics Solutions</strong>
+                <a href="/portfolio">Tailored Routes</a>
+                <a href="/portfolio">Flexible Operations</a>
+                <a href="/portfolio">Personalized Logistics</a>
+                <a href="/portfolio">Custom Service</a>
+              </li>
+              <li>
+                <strong>Medical Transport Services</strong>
+                <a href="/portfolio">Healthcare Drones</a>
+                <a href="/portfolio">PharmaFly Express</a>
+                <a href="/portfolio">Medical Swift</a>
+                <a href="/portfolio">Emergency Response</a>
+              </li>
+              <li>
+                <strong>Local Business Support</strong>
+                <a href="/portfolio">Local Biz Delivery</a>
+                <a href="/portfolio">Green Route Services</a>
+                <a href="/portfolio">Small Biz Express</a>
+                <a href="/portfolio">Neighborhood Drops</a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="/">Login</a></li>
+          <li><a class="nav-link scrollto" href="/help_contact">Contact Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    {% block content %}
+
+    <!-- ======= Landing Section ======= -->
+    <section id="hero">
+      <div class="hero-container" data-aos="fade-up">
+        {% if username %}
+        <h1>Welcome, {{ username }}!</h1>
+        {% else %}
+        <h1>Welcome!</h1>
+        {% endif %}
+        <h2>leading pioneer in the drone parcel delivery industry.</h2>
+        <a href="#about" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
+      </div>
+    </section>
+    <!-- End Landing -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts section-bg">
+      <div class="container">
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Happy Clients</strong> satisfied customers and counting</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects Completed</strong> successfully delivered projects and ongoing</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hours Of Support</strong> dedicated support hours provided to our clients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hard Workers</strong> committed team members ensuring success</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Counts Section -->
+
+
+    <!-- ======= Main Page ======= -->
+    <section id="about" class="about bg-light py-5">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-5" data-aos="fade-up">
+            <div class="content">
+              <h3 class="font-weight-bold">Welcome to VeloceAir Express</h3>
+              <p class="lead">
+                At VeloceAir Express, we are driven by a commitment to excellence and innovation.
+              </p>
+              <a href="/about" class="btn btn-primary about-btn">About us <i class="bx bx-chevron-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-7 mt-4 mt-md-0" data-aos="fade-up">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-md-6 icon-box mb-4" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-receipt"></i>
+                  <h4 class="font-weight-bold">Our Commitment</h4>
+                  <p>Committed to delivering exceptional services with a focus on customer satisfaction and innovation.
+                  </p>
+                </div>
+
+                <div class="col-md-6 icon-box mb-4" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bx bx-cube-alt"></i>
+                  <h4 class="font-weight-bold">Quality Assurance</h4>
+                  <p>We uphold the highest standards to ensure the quality and reliability of our products and services.
+                  </p>
+                </div>
+
+                <div class="col-md-6 icon-box mb-4" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bx bx-images"></i>
+                  <h4 class="font-weight-bold">Innovative Solutions</h4>
+                  <p>Constantly evolving to provide cutting-edge solutions that meet the evolving needs of our clients.
+                  </p>
+                </div>
+
+                <div class="col-md-6 icon-box mb-4" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bx bx-shield"></i>
+                  <h4 class="font-weight-bold">Customer Trust</h4>
+                  <p>Building enduring relationships with our clients through transparency, integrity, and trust.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End Main Page -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center">
+          <h3>Call To Action</h3>
+          <p> Ready for Swift Deliveries? Experience the Future with VeloceAir Express. Ship Now!</p>
+          <a class="cta-btn" href="/help_contact">Call To Action</a>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Cta Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2>What Our Customers Say.</h2>
+          <p>Discover the firsthand experiences of our satisfied customers and the exceptional drone delivery services
+            they've received on our Hobby Page – where their stories and glowing testimonials come to life!</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  It's refreshing to see a company actively involved in the community. VeloceAir Express's commitment to
+                  local drone events and educational initiatives is impressive. They go beyond just deliveries – they're
+                  making a positive impact in the drone community.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="static/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Raymond Teo</h3>
+                <h4>Kajang, Selangor</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  In the healthcare industry, timely deliveries are crucial. VeloceAir Express understands the
+                  importance of
+                  medical transport. Their adherence to regulations and swift deliveries have been vital for our
+                  operations.
+                  Highly recommended!
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="static/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Dr. Rodriguez</h3>
+                <h4>Putrajaya, Kuala Lumpur</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  VeloceAir Express not only delivers parcels but also captures breathtaking aerial shots. The drone
+                  photography service added a unique perspective to our event, and the results were stunning!
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="static/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jenny Karlis</h3>
+                <h4>Serdang, Selangor</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  VeloceAir Express has been a game-changer for our local business. Their last-mile delivery solutions
+                  are
+                  not only affordable but also eco-friendly, aligning perfectly with our values. Collaborating with them
+                  has
+                  enhanced our overall operations.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="static/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Mathew Brandon</h3>
+                <h4>Shah Alam, Selangor</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  I needed to send an important package across the city urgently, and VeloceAir Express came through for
+                  me.
+                  Their express parcel delivery service is truly reliable, and the real-time tracking gave me peace of
+                  mind.
+                  A top-notch service that I'll use again!
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="static/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Lee</h3>
+                <h4>Putrajaya, Kuala Lumpur</h4>
+
+
+
+              </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2>Our Team</h2>
+          <p>Meet the talented individuals who drive the success of VeloceAir Express.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up">
+              <div class="pic"><img src="static/img/team/team1.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>William Ng</h4>
+                <span>CEO & Founder</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="150">
+              <div class="pic"><img src="static/img/team/team2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Tonny Tang</h4>
+                <span>Product Manager</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="pic"><img src="static/img/team/team3.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Vicky Choong</h4>
+                <span>Chief Operating Officer</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="pic"><img src="static/img/team/team4.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Wong Li Ying</h4>
+                <span>Marketing Manager</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    {% endblock %}
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>VeloceAir Express</h3>
+              <p class="pb-3"><em>Elevating the Art of Swift and Elegant Deliveries</em></p>
+              <p>
+                A108 Jade Street <br>
+                Inthira Square 43200, Kuala Lumpur<br><br>
+                <strong>Phone:</strong> +60 11-1054088<br>
+                <strong>Email:</strong> veloceairexpress@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/main">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/hobby">Hobby</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/portfolio">Portfolio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/help_contact">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/services">Express Parcel Delivery</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/services">Customized Logistics Solutions</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/services">Medical Transport Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/services">Local Business Support</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>We value your feedback!</h4>
+            <p>Let us know your thoughts or suggestions by replying to this email.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>VeloceAir Express</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/ -->
+        Designed by <a href="https://bootstrapmade.com/">VeloceAirExpress.com</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="/"
+    class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+
+
+  <script src="static/js/main.js"></script>
+</body>
+
+</html>
